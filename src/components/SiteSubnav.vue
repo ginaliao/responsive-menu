@@ -16,7 +16,7 @@
           :class="['site-navlist__item', { 'has-subnav': child.children, 'is-active': activeNavIndex === index }]"
           :key="child.label"
         >
-          <a :href="child.url" class="site-navlist__link" @click.prevent="setActiveNav(index)">
+          <a :href="child.url" class="site-navlist__link" @click.prevent="child.children ? goTo(index) : null">
             {{ child.label }}
             <FontAwesomeIcon icon="chevron-right" v-if="child.children" />
           </a>
@@ -25,7 +25,7 @@
             :active="activeNavIndex === index"
             :children="child.children"
             :parent="child.label"
-            @back="setActiveNav"
+            @back="goTo(null)"
             @close="closeNav"
           />
         </li>
@@ -67,7 +67,8 @@ export default {
     goBack() {
       this.$emit('back', null);
     },
-    setActiveNav(index) {
+    goTo(index) {
+      this.$el.scrollTop = 0;
       this.activeNavIndex = index;
     }
   }

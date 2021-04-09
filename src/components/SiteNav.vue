@@ -19,174 +19,142 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import SiteSubnav from './SiteSubnav.vue'
 
 const nav = [{
-  active: false,
   label: "One",
   url: "/one",
   children: [
     {
-      active: false,
-      label: "One",
-      url: "/one",
+      label: "Two",
+      url: "/two",
     },
     {
-      active: false,
       label: "Two",
       url: "/two",
       children: [
         {
-          active: false,
-          label: "One",
-          url: "/one",
+          label: "Three",
+          url: "/three",
         },
         {
-          active: false,
-          label: "Two",
-          url: "/two",
+          label: "Three",
+          url: "/three",
         },
       ]
     },
     {
-      active: false,
-      label: "Three",
-      url: "/three",
+      label: "Two",
+      url: "/two",
       children: [
         {
-          active: false,
-          label: "One",
-          url: "/one",
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+         {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
           children: [
             {
-              active: false,
-              label: "One",
-              url: "/one",
+              label: "Four",
+              url: "/four",
             },
             {
-              active: false,
-              label: "Two",
-              url: "/two",
+              label: "Four",
+              url: "/four",
             },
           ]
         },
-        {
-          active: false,
-          label: "Two",
-          url: "/two",
-        },
-        {
-          active: false,
-          label: "Three",
-          url: "/three",
-        },
-        {
-          active: false,
-          label: "One",
-          url: "/one",
-        },
-        {
-          active: false,
-          label: "Two",
-          url: "/two",
-        },
-        {
-          active: false,
-          label: "Three",
-          url: "/three",
-        },
-        {
-          active: false,
-          label: "One",
-          url: "/one",
-        },
-        {
-          active: false,
-          label: "Two",
-          url: "/two",
-        },
-        {
-          active: false,
-          label: "Three",
-          url: "/three",
-        },
-        {
-          active: false,
-          label: "One",
-          url: "/one",
-        },
-        {
-          active: false,
-          label: "Two",
-          url: "/two",
-        },
-        {
-          active: false,
-          label: "Three",
-          url: "/three",
-        },
       ]
     },
     {
-      active: false,
-      label: "One",
-      url: "/one",
-    },
-    {
-      active: false,
       label: "Two",
       url: "/two",
     },
     {
-      active: false,
-      label: "Three",
-      url: "/three",
+      label: "Two",
+      url: "/two",
+    },
+    {
+      label: "Two",
+      url: "/two",
     },
   ]
 }, {
-  label: "Two",
-  url: "/two",
+  label: "One",
+  url: "/one",
 }, {
-  active: false,
   label: "One",
   url: "/one",
 },
 {
-  active: false,
-  label: "Two",
-  url: "/two",
-},
-{
-  active: false,
-  label: "Three",
-  url: "/three",
-},
-{
-  active: false,
   label: "One",
   url: "/one",
 },
 {
-  active: false,
-  label: "Two",
-  url: "/two",
-},
-{
-  active: false,
-  label: "Three",
-  url: "/three",
-},
-{
-  active: false,
   label: "One",
   url: "/one",
 },
 {
-  active: false,
-  label: "Two",
-  url: "/two",
+  label: "One",
+  url: "/one",
 },
 {
-  active: false,
-  label: "Three",
-  url: "/three",
+  label: "One",
+  url: "/one",
+},
+{
+  label: "One",
+  url: "/one",
+},
+{
+  label: "One",
+  url: "/one",
+},
+{
+  label: "One",
+  url: "/one",
+},
+{
+  label: "One",
+  url: "/one",
 }]
 
 export default {
