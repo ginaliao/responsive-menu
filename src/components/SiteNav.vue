@@ -1,6 +1,10 @@
 <template>
   <header class="site-header">
-    <button type="button" class="site-header__toggle" @click="toggleNav">
+    <button
+      type="button"
+      class="site-header__toggle"
+      @click="toggleNav"
+    >
       <FontAwesomeIcon icon="bars" />
     </button>
 
@@ -25,6 +29,20 @@ const nav = [{
     {
       label: "Two",
       url: "/two",
+      children: [
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+         {
+          label: "Three",
+          url: "/three",
+        },
+      ]
     },
     {
       label: "Two",
@@ -64,45 +82,41 @@ const nav = [{
           label: "Three",
           url: "/three",
         },
-        {
+         {
           label: "Three",
           url: "/three",
-        },
-        {
-          label: "Three",
-          url: "/three",
-        },
-        {
-          label: "Three",
-          url: "/three",
-        },
-        {
-          label: "Three",
-          url: "/three",
-        },
-        {
-          label: "Three",
-          url: "/three",
-        },
-        {
-          label: "Three",
-          url: "/three",
-        },
-        {
-          label: "Three",
-          url: "/three",
-          children: [
-            {
-              label: "Four",
-              url: "/four",
-            },
-            {
-              label: "Four",
-              url: "/four",
-            },
-          ]
         },
       ]
+    },
+    {
+      label: "Two",
+      url: "/two",
+      children: [
+        {
+          label: "Three",
+          url: "/three",
+        },
+        {
+          label: "Three",
+          url: "/three",
+        },
+         {
+          label: "Three",
+          url: "/three",
+        },
+      ]
+    },
+    {
+      label: "Two",
+      url: "/two",
+    },
+    {
+      label: "Two",
+      url: "/two",
+    },
+    {
+      label: "Two",
+      url: "/two",
     },
     {
       label: "Two",
@@ -121,30 +135,6 @@ const nav = [{
   label: "One",
   url: "/one",
 }, {
-  label: "One",
-  url: "/one",
-},
-{
-  label: "One",
-  url: "/one",
-},
-{
-  label: "One",
-  url: "/one",
-},
-{
-  label: "One",
-  url: "/one",
-},
-{
-  label: "One",
-  url: "/one",
-},
-{
-  label: "One",
-  url: "/one",
-},
-{
   label: "One",
   url: "/one",
 },
@@ -178,22 +168,29 @@ export default {
 
 <style lang="scss">
 .site-nav {
-  max-width: 375px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  transition: transform .3s cubic-bezier(0.950, 0.050, 0.795, 0.035);
-  transform: translateX(-100%);
+  position: relative;
+  @media screen and (max-width: 750px) {
+    max-width: 375px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: transform .3s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+    transform: translateX(-100%);
+  }
   &.is-active {
-    transform: translateX(0);
-    transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    @media screen and (max-width: 750px) {
+      transform: translateX(0);
+      transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    }
   }
   > .site-nav-panel {
-    transform: translateX(0);
+    @media screen and (max-width: 750px) {
+      transform: translateX(0);
+    }
   }
 }
 
@@ -202,5 +199,8 @@ export default {
   border: none;
   font-size: 1.5em;
   padding: 1em;
+  @media screen and (min-width: 751px) {
+    display: none;
+  }
 }
 </style>
